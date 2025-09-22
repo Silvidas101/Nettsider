@@ -4,17 +4,70 @@
     <meta charset="UTF-8">
     <title>Blog</title>
     <style>
+        body {
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            background-color: #000000;
+            color: white;
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            transition: width 0.3s, padding-top 0.3s;
+            overflow: hidden;
+        }
+        .sidebar.collapsed {
+            width: 0;
+            padding-top: 0;
+        }
+        .toggle-btn, .show-sidebar-btn {
+            background: #17661d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.2s;
+        }
+        .toggle-btn:hover, .show-sidebar-btn:hover {
+            background: #218c2c;
+        }
+        .sidebar .home-icon {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        .sidebar .nav-section {
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .main-content {
+            flex: 1;
+            background: #fff;
+            position: relative;
+        }
         header {
-            background-color: #05501a;
+            background-color: #17661d;
             color: white;
             padding: 20px;
             text-align: center;
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 40px;
             padding: 20px;
+            position: relative;
         }
         .grid-item {
             background: #f4f4f4;
@@ -22,32 +75,80 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: relative;
+            width: 60%;
+            min-width: 180px;
+            max-width: 350px;
+            transition: margin-left 0.3s;
+            margin-left: 0;
+        }
+        .grid-item:nth-child(1) {
+            margin-left: 0%;
+        }
+        .grid-item:nth-child(2) {
+            margin-left: 33%;
+        }
+        .grid-item:nth-child(3) {
+            margin-left: 66%;
         }
         .grid-item img {
             max-width: 100%;
             height: auto;
             border-radius: 6px;
         }
+        .show-sidebar-btn {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            z-index: 10;
+            display: none;
+        }
+        .show-sidebar-btn.visible {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>BLOG</h1>
-    </header>
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src="https://via.placeholder.com/200" alt="Sample Image 1">
-            <p>This is some text about the first image.</p>
-        </div>
-        <div class="grid-item">
-            <img src="https://via.placeholder.com/200" alt="Sample Image 2">
-            <p>This is some text about the second image.</p>
-        </div>
-        <div class="grid-item">
-            <img src="https://via.placeholder.com/200" alt="Sample Image 3">
-            <p>This is some text about the third image.</p>
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" id="hideBtn" onclick="toggleSidebar()">☰</button>
+        <span class="home-icon">&#8962;</span>
+        <span class="nav-section">Vlog</span>
+        <span class="nav-section">About Jamaica</span>
+    </div>
+    <div class="main-content">
+        <button class="show-sidebar-btn" id="showBtn" onclick="toggleSidebar()">Show Sidebar</button>
+        <header>
+            <h1>BLOG</h1>
+        </header>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/200" alt="Sample Image 1">
+                <p>This is some text about the first image.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/200" alt="Sample Image 2">
+                <p>This is some text about the second image.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/200" alt="Sample Image 3">
+                <p>This is some text about the third image.</p>
+            </div>
         </div>
     </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const showBtn = document.getElementById('showBtn');
+            const hideBtn = document.getElementById('hideBtn');
+            sidebar.classList.toggle('collapsed');
+            if (sidebar.classList.contains('collapsed')) {
+                showBtn.classList.add('visible');
+                hideBtn.style.display = 'none';
+            } else {
+                showBtn.classList.remove('visible');
+                hideBtn.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
-
