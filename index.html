@@ -50,6 +50,13 @@
             margin-bottom: 30px;
             font-weight: bold;
             letter-spacing: 2px;
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        .sidebar .nav-section:hover {
+            text-decoration: underline;
         }
         .main-content {
             flex: 1;
@@ -112,7 +119,7 @@
     <div class="sidebar" id="sidebar">
         <button class="toggle-btn" id="hideBtn" onclick="toggleSidebar()">☰</button>
         <span class="home-icon">&#8962;</span>
-        <span class="nav-section">Vlog</span>
+        <button class="nav-section" onclick="window.location.href='vlog.html'">Vlog</button>
         <span class="nav-section">About Jamaica</span>
     </div>
     <div class="main-content">
