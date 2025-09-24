@@ -71,10 +71,9 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             padding: 20px;
-            position: relative;
         }
         .grid-item {
             background: #f4f4f4;
@@ -82,21 +81,13 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            position: relative;
-            width: 60%;
-            min-width: 180px;
-            max-width: 350px;
-            transition: margin-left 0.3s;
-            margin-left: 0;
+            transition: box-shadow 0.3s;
         }
-        .grid-item:nth-child(1) {
-            margin-left: 0%;
-        }
-        .grid-item:nth-child(2) {
-            margin-left: 33%;
-        }
-        .grid-item:nth-child(3) {
-            margin-left: 66%;
+        .grid-item-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #17661d;
         }
         .grid-item img {
             max-width: 100%;
@@ -129,14 +120,17 @@
         </header>
         <div class="grid-container">
             <div class="grid-item">
+                <div class="grid-item-title">Title 1</div>
                 <img src="https://via.placeholder.com/200" alt="Sample Image 1">
                 <p>This is some text about the first image.</p>
             </div>
             <div class="grid-item">
+                <div class="grid-item-title">Title 2</div>
                 <img src="https://via.placeholder.com/200" alt="Sample Image 2">
                 <p>This is some text about the second image.</p>
             </div>
             <div class="grid-item">
+                <div class="grid-item-title">Title 3</div>
                 <img src="https://via.placeholder.com/200" alt="Sample Image 3">
                 <p>This is some text about the third image.</p>
             </div>
@@ -159,4 +153,3 @@
     </script>
 </body>
 </html>
-
