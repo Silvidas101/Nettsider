@@ -71,9 +71,11 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            grid-template-columns: 1fr;
+            gap: 30px;
             padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         .grid-item {
             background: #f4f4f4;
@@ -111,7 +113,7 @@
         <button class="toggle-btn" id="hideBtn" onclick="toggleSidebar()">☰</button>
         <span class="home-icon">&#8962;</span>
         <button class="nav-section" onclick="window.location.href='vlog.html'">Vlog</button>
-        <button class="nav-section" onclick="window.location.href='jamaica.html'">About Jamaica</button>
+        <button class="nav-section" onclick="window.location.href='jamaica.html'">About</button>
     </div>
     <div class="main-content">
         <button class="show-sidebar-btn" id="showBtn" onclick="toggleSidebar()">Show Sidebar</button>
@@ -120,9 +122,18 @@
         </header>
         <div class="grid-container">
             <div class="grid-item">
-                <div class="grid-item-title">Title 1</div>
+                <div class="grid-item-title">A Rich History and Vibrant Culture</div>
                 <img src="https://via.placeholder.com/200" alt="Sample Image 1">
-                <p>This is some text about the first image.</p>
+                <p>Long before European arrival, the island was home to the Taino people, whose peaceful way of life changed after Christopher Columbus claimed Jamaica in 1494. British colonial rule began in 1655, bringing sugar plantations worked by enslaved Africans. Despite the hardships of slavery, these African communities preserved their traditions, which deeply influenced Jamaica’s culture.
+
+Slavery ended in 1838, and Jamaica gained independence from Britain in 1962, sparking a renewed pride in its heritage. 
+
+Jamaica’s culture is a vibrant mix of African, European, and Indigenous influences. Music like reggae, ska, and dancehall made famous worldwide by legends such as Bob Marley carries powerful messages of resistance and hope. The island’s language, Jamaican Patois, reflects this diverse heritage, blending English with African roots. 
+
+Jamaican cuisine, from jerk chicken to ackee and saltfish, tells a story of cultural fusion, while spirituality, especially through the Rastafari movement, continues to shape identity and social values. 
+
+Jamaica’s history and culture are not just stories of the past they live on in every song, flavor, and tradition, inviting visitors to experience a truly unique and inspiring island.
+</p>
             </div>
             <div class="grid-item">
                 <div class="grid-item-title">Title 2</div>
