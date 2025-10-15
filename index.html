@@ -7,46 +7,66 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
         <button class="toggle-btn" id="hideBtn" onclick="toggleSidebar()">☰</button>
         <span class="home-icon">&#8962;</span>
         <button class="nav-section" onclick="window.location.href='vlog.html'">Vlog</button>
         <button class="nav-section" onclick="window.location.href='jamaica.html'">About</button>
     </div>
+
+    <!-- Main Content -->
     <div class="main-content">
         <button class="show-sidebar-btn" id="showBtn" onclick="toggleSidebar()">Show Sidebar</button>
+        
+        <!-- Header -->
         <header>
             <h1>Exploring Jamaica</h1>
         </header>
+
+        <!-- Image Gallery -->
         <div class="about-section">
             <div class="image-gallery">
                 <div class="gallery-grid">
-                    <img src="https://via.placeholder.com/300x200" alt="Jamaica Beach View" class="gallery-img">
-                    <img src="https://via.placeholder.com/300x200" alt="Blue Mountains" class="gallery-img">
-                    <img src="https://via.placeholder.com/300x200" alt="Reggae Culture" class="gallery-img">
-                    <img src="https://via.placeholder.com/300x200" alt="Jamaican Food" class="gallery-img">
+                    <img src="https://lp-cms-production.imgix.net/2024-12/Shutterstock1617476101.jpg" 
+                         alt="Jamaica Beach View" class="gallery-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ2TaslIY5XCWTRYqmVfnVZiGW8ecyonGSA&s" 
+                         alt="Blue Mountains" class="gallery-img">
+                    <img src="https://www.billboard.com/wp-content/uploads/media/bob-marley-1979-650-430.jpg" 
+                         alt="Reggae Culture" class="gallery-img">
+                    <img src="https://www.preciouscore.com/wp-content/uploads/2018/05/African-Doughnuts-Twisted-Doughnuts-Recipe.jpg" 
+                         alt="Jamaican Food" class="gallery-img">
                 </div>
             </div>
+
+            <!-- Blog Content -->
             <div class="about-content">
                 <h2>About This Jamaica Blog</h2>
-                <p>Welcome to my personal journey through the beautiful island of Jamaica! This blog is dedicated to sharing the incredible experiences, rich culture, and breathtaking landscapes that make Jamaica one of the most captivating destinations in the Caribbean.</p>
+                <p>Welcome to my personal journey through the beautiful island of Jamaica! This blog is dedicated to sharing 
+                   the incredible experiences, rich culture, and breathtaking landscapes that make Jamaica one of the most 
+                   captivating destinations in the Caribbean.</p>
                 
                 <h3>What You'll Find Here</h3>
                 <ul>
-                    <li><strong>Travel Stories:</strong> Personal adventures and discoveries across Jamaica's diverse regions</li>
-                    <li><strong>Cultural Insights:</strong> Deep dives into Jamaica's music, art, traditions, and local customs</li>
-                    <li><strong>Food Adventures:</strong> Authentic Jamaican cuisine experiences and local restaurant recommendations</li>
-                    <li><strong>Photography:</strong> Stunning visuals capturing Jamaica's natural beauty and vibrant street life</li>
-                    <li><strong>Travel Tips:</strong> Practical advice for visitors planning their own Jamaican adventure</li>
+                    <li><strong>Travel Stories:</strong> Personal adventures and discoveries</li>
+                    <li><strong>Cultural Insights:</strong> Music, art, and traditions</li>
+                    <li><strong>Food Adventures:</strong> Authentic Jamaican cuisine</li>
+                    <li><strong>Photography:</strong> Natural beauty and street life</li>
+                    <li><strong>Travel Tips:</strong> Practical visitor advice</li>
                 </ul>
                 
                 <h3>My Mission</h3>
-                <p>Through this blog, I aim to showcase the real Jamaica beyond the typical tourist experience. From the bustling streets of Kingston to the serene Blue Mountains, from hidden waterfalls to local jerk stands, I'm here to share the authentic spirit of this incredible island.</p>
+                <p>Through this blog, I aim to showcase the real Jamaica beyond the typical tourist experience. From the 
+                   bustling streets of Kingston to the serene Blue Mountains, I'm here to share the authentic spirit of 
+                   this incredible island.</p>
                 
-                <p>Join me as we explore Jamaica's rich history, celebrate its vibrant culture, and discover the warmth and resilience of its people. Whether you're planning a visit or simply curious about this amazing island, I hope this blog inspires you to see Jamaica through new eyes.</p>
+                <p>Join me as we explore Jamaica's rich history, celebrate its vibrant culture, and discover the warmth 
+                   and resilience of its people.</p>
             </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
