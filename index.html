@@ -9,15 +9,12 @@
 <body>
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
-        <button class="toggle-btn" id="hideBtn" onclick="toggleSidebar()">☰</button>
         <span class="home-icon">&#8962;</span>
         <button class="nav-section" onclick="window.location.href='vlog.html'">Vlog</button>
         <button class="nav-section" onclick="window.location.href='jamaica.html'">About</button>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
-        <button class="show-sidebar-btn" id="showBtn" onclick="toggleSidebar()">Show Sidebar</button>
         
         <!-- Header -->
         <header>
@@ -65,18 +62,3 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const showBtn = document.getElementById('showBtn');
-            const hideBtn = document.getElementById('hideBtn');
-            
-            sidebar.classList.toggle('collapsed');
-            showBtn.classList.toggle('visible');
-            hideBtn.style.display = sidebar.classList.contains('collapsed') ? 'none' : 'block';
-        }
-    </script>
-</body>
-</html>
