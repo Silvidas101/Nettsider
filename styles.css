@@ -14,14 +14,6 @@ body { margin: 0; display: flex; min-height: 100vh; font-family: Arial, sans-ser
 }
 .sidebar .nav-section:hover { text-decoration: underline; }
 
-/* Buttons */
-.toggle-btn, .show-sidebar-btn {
-    background: #17661d; color: white; border: none; border-radius: 6px; padding: 8px 12px;
-    margin-bottom: 20px; cursor: pointer; font-size: 1em; transition: background 0.2s;
-}
-.toggle-btn:hover, .show-sidebar-btn:hover { background: #218c2c; }
-.show-sidebar-btn { position: absolute; top: 30px; left: 10px; z-index: 10; display: none; }
-.show-sidebar-btn.visible { display: block; }
 
 /* Main Layout */
 .main-content { flex: 1; background: #fff; position: relative; display: flex; flex-direction: column; }
